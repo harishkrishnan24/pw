@@ -7,8 +7,23 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   password = "";
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
 
   onButtonClick() {
     this.password = "my password";
+  }
+
+  onChangeUseLetters() {
+    this.includeLetters = !this.includeLetters;
+  }
+
+  onChangeUseNumbers() {
+    this.includeNumbers = !this.includeNumbers;
+  }
+
+  onChangeUseSymbols() {
+    this.includeSymbols = !this.includeSymbols;
   }
 }
